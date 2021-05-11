@@ -1,0 +1,101 @@
+/*
+Theme Name: Neve Child
+Theme URI: http://example.com/neve-child/
+description: >-
+  Neve Child Theme
+Author: Stefan Caruana
+Author URI: http://example.com
+Template: neve
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+Text Domain: neve-child
+*/
+
+/*Child theme modifications*/
+
+/*Making small thumbnails larger in Shop sidebar*/
+.woocommerce ul.cart_list li img, .woocommerce ul.product_list_widget li img {
+    float: right;
+    margin-left: 4px;
+    width: 50px;
+    height: auto;
+    box-shadow: none;
+}
+
+/*Center align prices in Shop page*/
+.woocommerce div.product p.price, .woocommerce div.product span.price, .woocommerce ul.products li.product .price {
+    color: var(--nv-text-color);
+    font-weight: 700;
+	text-align: center;
+}
+
+/*Align product title text to center to match prices alignment*/
+.woocommerce ul.products li.product .woocommerce-loop-category__title, .woocommerce ul.products li.product .woocommerce-loop-product__title, .woocommerce ul.products li.product h3 {
+    padding: .5em 0;
+    margin: 0;
+    font-size: 1em;
+	text-align: center;
+}
+
+/*Align star ratings to center to match rest of product thumbnail*/
+.woocommerce ul.products li.product .star-rating {
+    font-size: .857em;
+	align-content: center;
+}
+
+/*Center align text for logged in account details*/
+.woocommerce-MyAccount-content{
+	text-align: center;
+}
+
+/*Move User Avatar to right side to avoid cluttered left side of Account page*/
+.woocommerce img, .woocommerce-page img {
+    height: auto;
+    max-width: 100%;
+	float: right;
+}
+
+/*Made Globe translate icon in primary menu smaller to match other elements*/
+span.gglobe {
+    background-image: url(//sc-smartphones3-85bd77.ingress-earth.easywp.com/wp-content/plugins/gtranslate/gtglobe.svg);
+    opacity: 0.8;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    display: block;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+/*Italics table header to help make it more visible*/
+.wpdt-c label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: bold;
+	font-style: italic;
+}
+
+/*Make website logo smaller for mobile users as it was too big by default*/
+.builder-item--logo .site-logo img {
+    max-width: 15% !important;
+}
+
+/*Month dividers in Releases page changed to Italic*/
+.mec-month-divider span {
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 700;
+    padding-bottom: 5px;
+    color: #313131;
+    border-bottom: 4px solid #ebebeb;
+    width: 100%;
+    display: block;
+    padding-bottom: 10px;
+    position: relative;
+	font-style: italic;
+}
